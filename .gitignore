@@ -1,0 +1,20 @@
+# Ignore node_modules for both backend and frontend
+/ecommerce-backend/node_modules/
+/ecommerce-admin/node_modules/
+
+# Ignore environment files
+/ecommerce-backend/.env
+
+# Ignore build/dist folders
+/ecommerce-admin/dist/
+/ecommerce-backend/dist/
+
+# Ignore TypeScript build artifacts
+*.tsbuildinfo
+
+# Ignore editor/OS artifacts
+.DS_Store
+*.log
+
+# Ignore VS Code settings
+/ecommerce-admin/.vscode/
