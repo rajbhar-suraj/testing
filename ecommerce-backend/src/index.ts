@@ -8,7 +8,7 @@ const PORT = 3000;
 
 app.use(
   cors({
-    origin:"https://ecommerce-app-1-ce5j.onrender.com",
+    origin:"https://ecommerce-admin-mzxl.onrender.com",
     credentials: true,
   })
 );
