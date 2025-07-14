@@ -2,9 +2,11 @@ import express from "express";
 import cors from "cors";
 import { AppDataSource } from "./config/data-source";
 import productRoutes from "./routes/product.routes";
+import path from 'path';
 
 const app = express();
 const PORT = 3000;
+app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
 
 app.use(
   cors({

@@ -26,9 +26,10 @@ export const updateProduct = async (req: Request, res: Response) => {
   if (!existing) return res.status(404).json({ message: "Not found" });
 
   const { sku, name, price } = req.body;
-  const images = req.files
+ const images = req.files && (req.files as Express.Multer.File[]).length > 0
     ? (req.files as Express.Multer.File[]).map((file) => file.filename)
-    : existing.images;
+    : existing.images; // 🟢 Keep existing images if none are uploaded
+
 
   repo.merge(existing, { sku, name, price, images });
   await repo.save(existing);
