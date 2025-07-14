@@ -23,7 +23,7 @@ export class ProductListComponent implements OnInit {
   }
 
   fetchProducts() {
-    console.log('API URL from environment:', environment.apiUrl);
+    console.log('API URL from environmentss:', environment.apiUrl);
 
     this.http.get<Product[]>(`${environment.apiUrl}/products`).subscribe({
       next: (data) => {

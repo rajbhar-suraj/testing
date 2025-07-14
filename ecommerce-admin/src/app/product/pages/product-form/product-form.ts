@@ -81,7 +81,7 @@ export class ProductFormComponent {
         .subscribe(() => this.router.navigate(['/products']));
     } else {
       this.http
-        .post('${environment.apiUrl}/api/products', formData)
+        .post(`${environment.apiUrl}/products`, formData)
         .subscribe(() => this.router.navigate(['/products']));
     }
   }
