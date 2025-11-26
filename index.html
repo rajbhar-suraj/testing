@@ -4,13 +4,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }  
+        .required-field-wrapper {
+            position: relative;
+            display: inline-block; /* ensures absolute positioning works relative to input */
+            width: 100%; 
+        }
+
+        .required-asterisk {
+            position: absolute;
+            top: 1rem;
+            transform: translateY(-50%);
+            color: red;
+            font-size: 18px;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Suraj - Git - testing</h1>
-    <h1>hrutik - Git - testing</h1>
-    <h1>Suraj - Git - testing</h1>
-    <h1>Suraj - Git - testing</h1>
 
+<!--About us  Bootstrap Hero Section with Top Gradient -->
+<div class="container-fluid p-0"
+     style="background: linear-gradient(to bottom, #e0f3ff, #d4f0fd, #f7fbff); min-height: 80vh;">
+    
+    <div class="row align-items-center p-5" style="min-height: 80vh;">
+        
+        <div class="col-lg-6 col-md-12 
+                    text-center text-lg-start  <!-- mobile center, desktop left -->
+                    px-4">
+
+            <h1 class="fw-bold display-4" style="color: #1a3a5f;">
+                Contact an Expert
+            </h1>
+
+            <p class="fs-4 fw-light mt-3">
+                Connect with the industry’s elite incident response advisors
+            </p>
+
+                                    <a href="javascript:void(0)" class="btn scrollToContact mt-4" style=" 
+                                    background:#1a3a5f;
+                                    color: white;
+                                    padding: 14px 32px;
+                                    border-radius: 50px;
+                                    font-weight: 600;
+                                    font-size: 1.15rem;
+                                    margin-top: 25px;
+                                    transition: all 0.3s ease;
+                            " onmouseover="this.style.background='#d4f0fd'; this.style.color='#0d1e2b';"
+                                onmouseout="this.style.background='#1a3a5f'; this.style.color='white';">
+                                Talk to a Security Expert
+                            </a>
+        </div>
+    </div>
+</div>
+
+
+        <!-- GET IN TOUCH SECTION -->
+        <div id="get-in-touch"  class="container py-5 my-5">
+            <div class="row g-5 align-items-start">
+
+                <!-- LEFT TEXT SECTION -->
+                <div class="col-lg-6">
+
+                    <p class=" fw-semibold text-lg mb-1" style="color: #1a3a5f;";">Get in touch</p>
+
+                    <h1 class="fw-bold display-7 mb-3" style="color: #1a3a5f;">
+                        Your Security Challenges, Our Expertise
+                    </h1>
+
+
+                    <p class="text-lg mb-4" style="max-width: 500px;">
+                        Whether you're experiencing a cyber incident, strengthening your security posture, or planning a full-scale assessment, our team is here to help. We support organizations across all major domains of cybersecurity, including:
+                    </p>
+
+                    <ul class="list-unstyled ms-1">
+
+                        <li class="mb-3 d-flex align-items-start">
+                            <span class=" fw-bold me-2" style="font-size: 20px;color: #1a3a5f">✔</span>
+                            <span class="fw-medium">Helping you enforce Zero Trust, secure access, and control privileged accounts.</span>
+                        </li>
+
+                        <li class="mb-3 d-flex align-items-start">
+                            <span class=" fw-bold me-2" style="font-size: 20px;color: #1a3a5f">✔</span>
+                            <span class="fw-medium">Protecting sensitive data through classification, encryption, and DSPM best practices.</span>
+                        </li>
+
+                        <li class="mb-3 d-flex align-items-start">
+                            <span class=" fw-bold me-2" style="font-size: 20px;color: #1a3a5f">✔</span>
+                            <span class="fw-medium">Modernizing your network with segmentation, firewall best practices, and secure connectivity.</span>
+                        </li>
+
+                        <li class="mb-3 d-flex align-items-start">
+                            <span class=" fw-bold me-2" style="font-size: 20px;color: #1a3a5f">✔</span>
+                            <span class="fw-medium">Hardening AWS and Azure environments, securing workloads, and eliminating misconfigurations.</span>
+                        </li>
+
+                        <li class="mb-3 d-flex align-items-start">
+                            <span class=" fw-bold me-2" style="font-size: 20px;color: #1a3a5f">✔</span>
+                            <span class="fw-medium">Improving visibility, SIEM readiness, detection coverage, and response workflows.</span>
+                        </li>
+
+                                              <li class="mb-3 d-flex align-items-start">
+                            <span class=" fw-bold me-2" style="font-size: 20px;color: #1a3a5f">✔</span>
+                            <span class="fw-medium">Aligning your security program with NIST, ISO, CIS, SOC, HIPAA, PCI, and more.</span>
+                        </li>
+
+                        <li class="mb-3 d-flex align-items-start">
+                            <span class=" fw-bold me-2" style="font-size: 20px;color: #1a3a5f">✔</span>
+                            <span class="fw-medium">Securing your SDLC, APIs, CI/CD pipelines, and preventing vulnerabilities early.</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+
+                <!-- RIGHT FORM SECTION -->
+                <div id="contact-us-section" class="col-lg-6">
+                    <form class="p-4 rounded-3" style="background: transparent;">
+
+                        <h1 class="fw-bold display-7 mb-3 text-center" style="padding-bottom:50px; color: #1a3a5f;">
+                            Contact us now
+                        </h1>
+
+                        <div class="row g-4">
+
+                            <div class="col-12 required-field-wrapper">
+                                <input id="full_name" type="text" class="form-control required-field" placeholder="Full Name">
+                            </div>
+
+
+                            <!-- Email -->
+                            <div class="col-12 required-field-wrapper">
+                                <input id="email_id" type="email" class="form-control required-field" placeholder="Email id">
+                            </div>
+
+                            <!-- Company -->
+                            <div class="col-12">
+                                <input id="company" type="text" class="form-control" placeholder="Company">
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="col-12 required-field-wrapper">
+                                <input id="contact_no" type="tel" class="form-control required-field" placeholder="Phone">
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="col-12 required-field-wrapper">
+                                <input id="subject" type="text" class="form-control required-field" placeholder="Subject">
+                            </div>
+
+                            <!-- Comments -->
+                            <div class="col-12 required-field-wrapper">
+                                <textarea id="description" class="form-control required-field" rows="3" placeholder="Question & Comments"></textarea>
+                            </div>
+
+                            <p>By submitting this form, I understand my personal data will be processed in accordance with Privacy Policy and Terms of Use.</p>
+
+                            <!-- Submit button -->
+                            <div class="col-12 mt-3">
+                                <button id="submit" type="button" 
+                                        class="btn" style="
+                                        padding:12px 28px;
+                                        border-radius:50px;
+                                        background:#1a3a5f;
+                                        color:#fff;
+                                        font-weight:600;
+                                        font-size:1.1rem;
+                                        transition:all .3s ease;
+                                    " onmouseover="this.style.background='#d4f0fd'; this.style.color='#0d1e2b';"
+                                        onmouseout="this.style.background='#1a3a5f'; this.style.color='#fff';">
+                                                    Submit
+                                                </button>
+                            
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+<script>
+ document.querySelectorAll(".scrollToContact").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.getElementById("contact-us-section").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+
+
+document.querySelectorAll('.required-field').forEach(input => {
+    // Wrap the input
+    let wrapper = document.createElement('div');
+    wrapper.classList.add('required-field-wrapper');
+    input.parentNode.insertBefore(wrapper, input);
+    wrapper.appendChild(input);
+
+    // Create the asterisk
+    let asterisk = document.createElement('span');
+    asterisk.classList.add('required-asterisk');
+    asterisk.innerHTML = "*";
+    wrapper.appendChild(asterisk);
+
+    // Measure placeholder text width
+    let measure = document.createElement('span');
+    measure.style.visibility = "hidden";
+    measure.style.position = "absolute";
+    measure.style.whiteSpace = "pre";
+    measure.style.fontSize = window.getComputedStyle(input).fontSize;
+    measure.style.fontFamily = window.getComputedStyle(input).fontFamily;
+    measure.textContent = input.placeholder;
+    wrapper.appendChild(measure);
+
+    // Position asterisk at placeholder end + 12px
+    asterisk.style.left = (measure.offsetWidth + 16) + "px";
+
+    // Hide asterisk when typing
+    input.addEventListener("input", function () {
+        asterisk.style.display = this.value ? "none" : "block";
+    });
+});
+
+</script>
 
 </body>
 </html>
